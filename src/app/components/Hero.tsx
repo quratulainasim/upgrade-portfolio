@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -7,12 +8,18 @@ function Hero() {
       <section className="flex flex-col md:flex-row gap-14 py-20 items-center">
         <div className="flex-1 items-center">
           <h1 className="font-bold text-3xl m-5 text-center md:text-4xl text-red-700">
-            Qurat ul Ain Frontend Developer
+            Qurat ul Ain UI/UX Frontend Developer
           </h1>
           <h2 className="text-md text-center m-2 md:text-lg text-black font-semibold mt-3">
             Blending expertise in Analytical science and management to create
             intuitive high performing web experiences
           </h2>
+
+          <div className="flex flex-col justify-start items-center p-2">
+          <Link href="/cv.pdf">
+       <button className="flex mx-auto text-white font-bold bg-gray-700 border-0 py-2 px-4 hover:bg-orange-300 rounded text-lg">Download CV</button>
+        </Link>
+       </div>
         </div>
 
         <div className="flex-1 w-auto h-auto ">
@@ -25,6 +32,7 @@ function Hero() {
             className="object-cover rounded-lg h-auto max-w-full"
           />
         </div>
+        
       </section>
       <div className="flex flex-col items-center py-0 m-0">
         <h2 className="font-bold text-3xl text-center text-red-700">
@@ -47,6 +55,7 @@ function Hero() {
           className="object-cover w-full"
         />
       </div>
+      
     </main>
   );
 }

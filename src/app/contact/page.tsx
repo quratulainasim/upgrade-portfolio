@@ -1,8 +1,13 @@
+
+"use client";
 import Header from "../components/Header";
 import React from "react";
 import Link from "next/link";
 import Footer from "../components/Footer";
 function Contact() {
+  const handleSubmit = () => {
+    alert("Form submitted successfully!");
+  };
   return (
     <div>
       <Header />
@@ -63,7 +68,10 @@ function Contact() {
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-white font-bold bg-gray-700 border-0 py-2 px-4 hover:bg-orange-300 rounded text-lg">
+                <button
+                  onClick={handleSubmit}
+                  className="flex mx-auto text-white font-bold bg-gray-700 border-0 py-2 px-4 hover:bg-orange-300 rounded text-lg"
+                >
                   Submit
                 </button>
                 <Link href="/"></Link>
